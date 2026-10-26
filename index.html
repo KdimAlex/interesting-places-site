@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="robots" content="noindex, nofollow" />
+  <meta name="referrer" content="no-referrer" />
+  <title>Interesting Places</title>
+  <link rel="stylesheet" href="vendor/leaflet/leaflet.css" />
+  <link rel="stylesheet" href="map.css" />
+</head>
+<body>
+  <div id="map"></div>
+  <aside class="panel" id="panel">
+    <div class="panel-handle" aria-hidden="true"></div>
+    <div class="panel-head">
+      <div class="panel-title-row">
+        <h1>Interesting Places</h1>
+        <button type="button" class="map-toggle" id="mapToggle" aria-pressed="false">Map</button>
+      </div>
+      <input id="search" class="search-input" type="search" placeholder="Search" autocomplete="off" spellcheck="false" />
+      <div class="chips" id="chips"></div>
+    </div>
+    <p class="status" id="status">Loading…</p>
+    <div class="list" id="list"></div>
+  </aside>
+  <aside class="detail" id="detail" hidden>
+    <button type="button" class="detail-close" id="detailClose" aria-label="Close">✕</button>
+    <div class="detail-photo-wrap" id="detailPhotoWrap" hidden>
+      <img id="detailPhoto" class="detail-photo" alt="" />
+    </div>
+    <h2 id="detailTitle"></h2>
+    <p class="detail-address" id="detailAddress"></p>
+    <p class="detail-notes" id="detailNotes" hidden></p>
+    <a class="maps-link" id="mapsLink" href="" target="_blank" rel="noopener">Open in Maps</a>
+  </aside>
+  <button type="button" class="locate" id="locate" aria-label="Use my location">◎</button>
+  <script src="vendor/leaflet/leaflet.js"></script>
+  <script src="map.js"></script>
+</body>
+</html>
